@@ -1,0 +1,11 @@
+[
+  {
+    "Name": "Test",
+    "Projects": [
+      {
+        "Path": "PlaywrightTests\\PlaywrightTests.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
