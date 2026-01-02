@@ -1,0 +1,57 @@
+﻿@page "/counter"
+@using BlazorDeconnected.Components
+@using BlazorDeconnected.Services
+@inherits OfflineComponentBase
+
+
+@inject HttpClient Http
+@inject ILocalStorageService LocalStorage
+@inject ISaveCounterCommand SaveCommand
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<button class="btn btn-secondary" @onclick="SaveCount">Save Count</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    protected async override Task OnAfterRenderAsync(bool firstRender)
+    {
+        await base.OnAfterRenderAsync(firstRender);
+
+        if (firstRender)
+        {
+            if (IsOnline)
+            {
+                var counterData = await Http.GetFromJsonAsync<CounterData>("api/counter");
+                if (counterData != null)
+                {
+                    currentCount = counterData.Counter;
+                }
+            }
+            else
+            {
+                var counter = (await LocalStorage.GetItemAsync("counter")) ?? "0";
+                currentCount = int.Parse(counter);
+            }
+            StateHasChanged();
+        }
+    }
+
+    public async Task SaveCount()
+    {
+        await SaveCommand.ExecuteAsync(currentCount);
+    }
+
+    public record CounterData(int Counter);
+}
