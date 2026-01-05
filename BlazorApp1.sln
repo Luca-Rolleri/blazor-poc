@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "�
 		.runsettings = .runsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorDeconnected", "BlazorDeconnected\BlazorDeconnected.csproj", "{66D5E2B9-6DCF-4855-9683-DBC1AC6437AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{23CA1FC0-021D-48D1-B946-5FDEB35394ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{5033FA2A-2006-4585-8B86-EFAC8C241A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5033FA2A-2006-4585-8B86-EFAC8C241A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5033FA2A-2006-4585-8B86-EFAC8C241A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D5E2B9-6DCF-4855-9683-DBC1AC6437AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D5E2B9-6DCF-4855-9683-DBC1AC6437AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D5E2B9-6DCF-4855-9683-DBC1AC6437AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D5E2B9-6DCF-4855-9683-DBC1AC6437AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23CA1FC0-021D-48D1-B946-5FDEB35394ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23CA1FC0-021D-48D1-B946-5FDEB35394ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23CA1FC0-021D-48D1-B946-5FDEB35394ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23CA1FC0-021D-48D1-B946-5FDEB35394ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
